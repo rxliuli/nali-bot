@@ -81,6 +81,7 @@ export class GameRoom extends DurableObject<Bindings> {
     await this.ctx.storage.put(KEY_LAST_IMAGE, image.path)
     this.round = round
     await this.ctx.storage.setAlarm(round.endsAt)
+    console.log(`[nali] round started: channel=${input.channelId} deck=${deck.id} card=${card.id} image=${image.path}`)
 
     return { ok: true, cardId: card.id, deckId: deck.id, imagePath: image.path, endsAt: round.endsAt }
   }
@@ -207,10 +208,12 @@ export class GameRoom extends DurableObject<Bindings> {
         if (!res.ok) {
           // e.g. token expired/revoked — log and move on, do not retry.
           const body = await res.text().catch(() => '')
-          console.error(`[nali] reveal followup failed: ${res.status} ${res.statusText} ${body}`)
+          console.error(`[nali] reveal failed: channel=${round.channelId} card=${round.cardId} status=${res.status} ${body}`)
+        } else {
+          console.log(`[nali] reveal sent: channel=${round.channelId} card=${round.cardId} correct=${correctGuesses.length}`)
         }
       } catch (e) {
-        console.error('[nali] reveal followup error', e)
+        console.error(`[nali] reveal error: channel=${round.channelId} card=${round.cardId}`, e)
       }
     }
 

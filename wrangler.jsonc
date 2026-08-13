@@ -13,5 +13,13 @@
     "bindings": [{ "name": "GameRoom", "class_name": "GameRoom" }]
   },
 
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }]
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }],
+
+  // Custom domain (provisioned on deploy; requires rxliuli.com zone in this account)
+  "routes": [{ "pattern": "nali-bot.rxliuli.com", "custom_domain": true }],
+
+  // Logging & metrics: Workers Logs (console.* in the dashboard) + invocation metrics
+  "observability": {
+    "enabled": true
+  }
 }
