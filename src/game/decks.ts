@@ -15,7 +15,7 @@ export function getCard(deckId: string, cardId: string): Card | undefined {
 /** Choices for the /play deck option. */
 export function listDeckChoices(): { name: string; value: string }[] {
   return decks.map((d) => ({
-    name: `${d.name.zh} / ${d.name.en}`,
+    name: `${d.name.en} / ${d.name.zh}`,
     value: d.id,
   }))
 }

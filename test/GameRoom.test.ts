@@ -130,7 +130,7 @@ describe('GameRoom: reveal (stop + alarm)', () => {
     expect(calls.length).toBe(1)
     expect(calls[0]!.url).toBe(`https://discord.com/api/webhooks/${APP_ID}/tok-abc`)
     const embeds = calls[0]!.body as { embeds: { title?: string; description?: string }[] }
-    expect(embeds.embeds[0]!.title).toContain('中国城市')
+    expect(embeds.embeds[0]!.title).toContain('China / 中国城市') // English-first deck name
     expect(embeds.embeds[0]!.description).toContain('The answer is')
     expect(embeds.embeds[1]!.title).toContain('on the map')
 
@@ -173,8 +173,9 @@ describe('GameRoom: reveal (stop + alarm)', () => {
     const answerEmbed = body.embeds[0]!
     // the reveal shows the same photo that was asked
     expect(answerEmbed.image!.url).toContain(result.imagePath)
-    // and names the specific place (all beijing photos carry a label)
+    // and names the specific place — English first, then Chinese
     expect(answerEmbed.description).toContain('📍 You saw:')
+    expect(answerEmbed.description).toMatch(/You saw: \*\*[^\n]+\/ [^\n]+\*\*/)
   })
 
   it('avoids repeating the same photo in consecutive rounds', async () => {

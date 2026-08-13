@@ -134,6 +134,7 @@ To exercise the real Discord flow locally, expose the dev server (e.g. `wrangler
 
 ## Design docs
 
+- [`docs/copy.md`](docs/copy.md) — 文案规范：固定文案英文单语，学习内容英文在前
 - [`docs/images.md`](docs/images.md) — 图片模型：每城多图 + 每图 JSON 化（地标标注）已实施；地图坐标维持城市级（每图坐标 v2）。
 
 ## Notes & known limits (v1)

@@ -31,24 +31,24 @@ const integrationTypes = [1] as const
 const contexts = [0, 1, 2] as const
 
 const commands = [
-  new Command('ping', '测试 / Test')
+  new Command('ping', 'Test')
     .integration_types(...integrationTypes)
     .contexts(...contexts),
 
-  new Command('play', '开始一轮猜城市游戏 / Start a city guessing round')
+  new Command('play', 'Start a city guessing round')
     .integration_types(...integrationTypes)
     .contexts(...contexts)
     .options(
-      new Option('deck', '选择牌组 / Choose a deck', 'String')
+      new Option('deck', 'Choose a deck', 'String')
         .required(false)
         .choices(...listDeckChoices().map((c) => ({ name: c.name, value: c.value }))),
     ),
 
-  new Command('stop', '提前结束当前回合 / End the current round early')
+  new Command('stop', 'End the current round early')
     .integration_types(...integrationTypes)
     .contexts(...contexts),
 
-  new Command('rank', '查看本频道排行榜 / View this channel’s leaderboard')
+  new Command('rank', "View this channel's leaderboard")
     .integration_types(...integrationTypes)
     .contexts(...contexts),
 ]

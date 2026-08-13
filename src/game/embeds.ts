@@ -11,7 +11,7 @@ const COLOR_MAP = 0xed8936
 function hintLine(card: Card): string {
   const zh = card.hint?.zh
   const en = card.hint?.en
-  if (zh && en) return `💡 Hint: ${zh} / ${en}`
+  if (zh && en) return `💡 Hint: ${en} / ${zh}`
   if (zh) return `💡 Hint: ${zh}`
   if (en) return `💡 Hint: ${en}`
   return ''
@@ -22,7 +22,7 @@ export function buildQuestionEmbed(deck: Deck, card: Card, imagePath: string, en
   const secondsLeft = Math.max(0, Math.round((endsAt - Date.now()) / 1000))
   const hint = hintLine(card)
   const lines = [
-    `Deck: **${deck.name.zh} / ${deck.name.en}**`,
+    `Deck: **${deck.name.en} / ${deck.name.zh}**`,
     '',
     `⏱️ **${secondsLeft}** seconds left`,
   ]
@@ -55,11 +55,11 @@ export function buildRevealEmbeds(
   const label = card.images.find((i) => i.path === imagePath)?.label
   const hint = hintLine(card)
   const answerEmbed = new Embed()
-    .title(`🎯 ${deck.name.zh} / ${deck.name.en}`)
+    .title(`🎯 ${deck.name.en} / ${deck.name.zh}`)
     .description(
-      `The answer is **${card.display.zh} / ${card.display.en}**\n` +
+      `The answer is **${card.display.en} / ${card.display.zh}**\n` +
         (label?.zh || label?.en
-          ? `📍 You saw: **${label.zh ?? ''}${label.zh && label.en ? ' / ' : ''}${label.en ?? ''}**\n`
+          ? `📍 You saw: **${label.en ?? ''}${label.zh && label.en ? ' / ' : ''}${label.zh ?? ''}**\n`
           : '') +
         (hint ? `${hint}\n` : '') +
         'Photo above',
