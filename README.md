@@ -161,4 +161,4 @@ Edit `decks/cn-cities/deck.json` directly to add/remove cities (metadata: names,
 
 - [Terms of Service](TERMS_OF_SERVICE.md)
 - [Privacy Policy](PRIVACY_POLICY.md)
-- [License](LICENSE) — code is MIT; the photographs under `decks/*/` are All Rights Reserved (see LICENSE for details).
+- [License](LICENSE) — code is MIT; the photographs under `decks/*/` are © rxliuli, CC BY-NC-ND 4.0 (non-commercial, attribution required, no derivatives).

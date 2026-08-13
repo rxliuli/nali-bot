@@ -25,10 +25,18 @@ SOFTWARE.
 ## Photographs and deck data
 
 The photographs under `decks/*/` (the WebP files, and any camera originals used
-to produce them) are **not** covered by the MIT license above. They are original
-travel photographs © 2026 rxliuli, **All Rights Reserved**.
+to produce them) are © 2026 rxliuli, licensed under the **Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International** license
+([CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)).
 
-- You may not copy, redistribute, or use these photographs for any purpose
-  other than running the Nali bot as published, without prior written permission.
-- The factual deck metadata (city names, coordinates, answer aliases) in
-  `decks/*/deck.json` is not creative expression and is free of restrictions.
+This means you may **share** them (verbatim copies) for **non-commercial**
+purposes **with attribution** — e.g.:
+
+> Photo © 2026 rxliuli, [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+You may **not** use them commercially or create modified/derivative versions.
+See the [full legal code](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+for details.
+
+The factual deck metadata (city names, coordinates, answer aliases) in
+`decks/*/deck.json` is not creative expression and is free of restrictions.
