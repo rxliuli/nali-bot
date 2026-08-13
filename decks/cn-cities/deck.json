@@ -1,0 +1,662 @@
+{
+  "id": "cn-cities",
+  "name": {
+    "zh": "中国城市",
+    "en": "China"
+  },
+  "cards": [
+    {
+      "id": "beijing",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "answers": {
+        "zh": [
+          "北京",
+          "北京市"
+        ],
+        "en": [
+          "beijing"
+        ]
+      },
+      "display": {
+        "zh": "北京",
+        "en": "Beijing"
+      },
+      "hint": {
+        "zh": "中国的首都，有故宫",
+        "en": "Capital of China, home of the Forbidden City"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/beijing.webp",
+          "label": {
+            "zh": "故宫",
+            "en": "Forbidden City"
+          }
+        },
+        {
+          "path": "decks/cn-cities/beijing-2.webp",
+          "label": {
+            "zh": "中国国家博物馆",
+            "en": "National Museum of China"
+          }
+        },
+        {
+          "path": "decks/cn-cities/beijing-3.webp",
+          "label": {
+            "zh": "北京奥林匹克公园",
+            "en": "Beijing Olympic Park"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shanghai",
+      "lat": 31.2304,
+      "lng": 121.4737,
+      "answers": {
+        "zh": [
+          "上海",
+          "上海市"
+        ],
+        "en": [
+          "shanghai"
+        ]
+      },
+      "display": {
+        "zh": "上海",
+        "en": "Shanghai"
+      },
+      "hint": {
+        "zh": "中国最大城市，外滩",
+        "en": "China's largest city, famous for the Bund"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/shanghai.webp",
+          "label": {
+            "zh": "陆家嘴",
+            "en": "Lujiazui"
+          }
+        },
+        {
+          "path": "decks/cn-cities/shanghai-2.webp",
+          "label": {
+            "zh": "陆家嘴",
+            "en": "Lujiazui"
+          }
+        },
+        {
+          "path": "decks/cn-cities/shanghai-3.webp",
+          "label": {
+            "zh": "新世界城",
+            "en": "New World City"
+          }
+        }
+      ]
+    },
+    {
+      "id": "guangzhou",
+      "lat": 23.1291,
+      "lng": 113.2644,
+      "answers": {
+        "zh": [
+          "广州",
+          "广州市"
+        ],
+        "en": [
+          "guangzhou",
+          "canton"
+        ]
+      },
+      "display": {
+        "zh": "广州",
+        "en": "Guangzhou"
+      },
+      "hint": {
+        "zh": "南方大都市，小蛮腰电视塔",
+        "en": "Southern metropolis, home of the Canton Tower"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/guangzhou.webp",
+          "label": {
+            "zh": "广州塔",
+            "en": "Canton Tower"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shenzhen",
+      "images": [
+        {
+          "path": "decks/cn-cities/shenzhen.webp",
+          "label": {
+            "zh": "深圳湾",
+            "en": "Shenzhen Bay"
+          }
+        }
+      ],
+      "lat": 22.5431,
+      "lng": 114.0579,
+      "answers": {
+        "zh": [
+          "深圳",
+          "深圳市"
+        ],
+        "en": [
+          "shenzhen"
+        ]
+      },
+      "display": {
+        "zh": "深圳",
+        "en": "Shenzhen"
+      },
+      "hint": {
+        "zh": "经济特区，与香港一河之隔",
+        "en": "Special Economic Zone, just across the border from Hong Kong"
+      }
+    },
+    {
+      "id": "harbin",
+      "lat": 45.8038,
+      "lng": 126.5349,
+      "answers": {
+        "zh": [
+          "哈尔滨",
+          "哈尔滨市"
+        ],
+        "en": [
+          "harbin",
+          "haerbin"
+        ]
+      },
+      "display": {
+        "zh": "哈尔滨",
+        "en": "Harbin"
+      },
+      "hint": {
+        "zh": "冰城，圣索菲亚教堂",
+        "en": "Ice city with a famous Russian-style cathedral"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/harbin.webp",
+          "label": {
+            "zh": "圣索菲亚大教堂",
+            "en": "Saint Sophia Cathedral"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urumqi",
+      "lat": 43.8256,
+      "lng": 87.6168,
+      "answers": {
+        "zh": [
+          "乌鲁木齐",
+          "乌鲁木齐市"
+        ],
+        "en": [
+          "urumqi",
+          "wulumuqi",
+          "ürümqi"
+        ]
+      },
+      "display": {
+        "zh": "乌鲁木齐",
+        "en": "Ürümqi"
+      },
+      "hint": {
+        "zh": "新疆首府，红山",
+        "en": "Capital of Xinjiang, known for Red Hill"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/urumqi.webp",
+          "label": {
+            "zh": "二道桥清真寺",
+            "en": "Erdaoqiao Mosque"
+          }
+        },
+        {
+          "path": "decks/cn-cities/urumqi-2.webp",
+          "label": {
+            "zh": "丝绸之路塔",
+            "en": "Silk Road Tower"
+          }
+        },
+        {
+          "path": "decks/cn-cities/urumqi-3.webp",
+          "label": {
+            "zh": "红山公园",
+            "en": "Hongshan Park"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lhasa",
+      "lat": 29.652,
+      "lng": 91.1721,
+      "answers": {
+        "zh": [
+          "拉萨",
+          "拉萨市"
+        ],
+        "en": [
+          "lhasa",
+          "lasa"
+        ]
+      },
+      "display": {
+        "zh": "拉萨",
+        "en": "Lhasa"
+      },
+      "hint": {
+        "zh": "西藏首府，布达拉宫",
+        "en": "Capital of Tibet, home of the Potala Palace"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/lhasa.webp",
+          "label": {
+            "zh": "布达拉宫",
+            "en": "Potala Palace"
+          }
+        },
+        {
+          "path": "decks/cn-cities/lhasa-2.webp",
+          "label": {
+            "zh": "拉萨市区",
+            "en": "Lhasa city"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xian",
+      "lat": 34.3416,
+      "lng": 108.9398,
+      "answers": {
+        "zh": [
+          "西安",
+          "西安市"
+        ],
+        "en": [
+          "xian",
+          "xi'an"
+        ]
+      },
+      "display": {
+        "zh": "西安",
+        "en": "Xi'an"
+      },
+      "hint": {
+        "zh": "兵马俑所在地",
+        "en": "Home of the Terracotta Army"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/xian.webp",
+          "label": {
+            "zh": "兵马俑",
+            "en": "Terracotta Army"
+          }
+        },
+        {
+          "path": "decks/cn-cities/xian-2.webp",
+          "label": {
+            "zh": "兵马俑",
+            "en": "Terracotta Army"
+          }
+        },
+        {
+          "path": "decks/cn-cities/xian-3.webp",
+          "label": {
+            "zh": "兵马俑",
+            "en": "Terracotta Army"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chongqing",
+      "images": [
+        {
+          "path": "decks/cn-cities/chongqing.webp",
+          "label": {
+            "zh": "洪崖洞夜景",
+            "en": "Hongya Cave at night"
+          }
+        },
+        {
+          "path": "decks/cn-cities/chongqing-2.webp",
+          "label": {
+            "zh": "十八梯",
+            "en": "Shibati"
+          }
+        },
+        {
+          "path": "decks/cn-cities/chongqing-3.webp",
+          "label": {
+            "zh": "李子坝站",
+            "en": "Liziba Station"
+          }
+        }
+      ],
+      "lat": 29.563,
+      "lng": 106.5516,
+      "answers": {
+        "zh": [
+          "重庆",
+          "重庆市"
+        ],
+        "en": [
+          "chongqing"
+        ]
+      },
+      "display": {
+        "zh": "重庆",
+        "en": "Chongqing"
+      },
+      "hint": {
+        "zh": "山城，8D 魔幻立体城市",
+        "en": "Mountain city with a famous cyberpunk skyline"
+      }
+    },
+    {
+      "id": "wuhan",
+      "lat": 30.5928,
+      "lng": 114.3055,
+      "answers": {
+        "zh": [
+          "武汉",
+          "武汉市"
+        ],
+        "en": [
+          "wuhan"
+        ]
+      },
+      "display": {
+        "zh": "武汉",
+        "en": "Wuhan"
+      },
+      "hint": {
+        "zh": "黄鹤楼所在地",
+        "en": "Home of the Yellow Crane Tower"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/wuhan.webp",
+          "label": {
+            "zh": "黄鹤楼",
+            "en": "Yellow Crane Tower"
+          }
+        },
+        {
+          "path": "decks/cn-cities/wuhan-2.webp",
+          "label": {
+            "zh": "武汉长江大桥",
+            "en": "Wuhan Yangtze River Bridge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nanjing",
+      "lat": 32.0603,
+      "lng": 118.7969,
+      "answers": {
+        "zh": [
+          "南京",
+          "南京市"
+        ],
+        "en": [
+          "nanjing"
+        ]
+      },
+      "display": {
+        "zh": "南京",
+        "en": "Nanjing"
+      },
+      "hint": {
+        "zh": "六朝古都，中山陵",
+        "en": "Ancient capital, home of Sun Yat-sen Mausoleum"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/nanjing.webp",
+          "label": {
+            "zh": "中山陵",
+            "en": "Sun Yat-sen Mausoleum"
+          }
+        },
+        {
+          "path": "decks/cn-cities/nanjing-2.webp",
+          "label": {
+            "zh": "明孝陵",
+            "en": "Ming Xiaoling Mausoleum"
+          }
+        },
+        {
+          "path": "decks/cn-cities/nanjing-3.webp",
+          "label": {
+            "zh": "南京城墙与天际线",
+            "en": "Nanjing city wall & skyline"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hangzhou",
+      "lat": 30.2741,
+      "lng": 120.1551,
+      "answers": {
+        "zh": [
+          "杭州",
+          "杭州市"
+        ],
+        "en": [
+          "hangzhou"
+        ]
+      },
+      "display": {
+        "zh": "杭州",
+        "en": "Hangzhou"
+      },
+      "hint": {
+        "zh": "西湖与雷峰塔",
+        "en": "West Lake and Leifeng Pagoda"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/hangzhou.webp",
+          "label": {
+            "zh": "西湖",
+            "en": "West Lake"
+          }
+        },
+        {
+          "path": "decks/cn-cities/hangzhou-2.webp",
+          "label": {
+            "zh": "杭州城市天际线",
+            "en": "Hangzhou city skyline"
+          }
+        }
+      ]
+    },
+    {
+      "id": "suzhou",
+      "images": [
+        {
+          "path": "decks/cn-cities/suzhou.webp",
+          "label": {
+            "zh": "山塘街",
+            "en": "Shantang Street"
+          }
+        },
+        {
+          "path": "decks/cn-cities/suzhou-2.webp",
+          "label": {
+            "zh": "姑苏墙",
+            "en": "Gusu typographic wall"
+          }
+        }
+      ],
+      "lat": 31.2989,
+      "lng": 120.5853,
+      "answers": {
+        "zh": [
+          "苏州",
+          "苏州市"
+        ],
+        "en": [
+          "suzhou"
+        ]
+      },
+      "display": {
+        "zh": "苏州",
+        "en": "Suzhou"
+      },
+      "hint": {
+        "zh": "园林之城，上有天堂下有苏杭",
+        "en": "City of classical gardens - \"up in heaven, down in Suzhou-Hangzhou\""
+      }
+    },
+    {
+      "id": "qingdao",
+      "lat": 36.0671,
+      "lng": 120.3826,
+      "answers": {
+        "zh": [
+          "青岛",
+          "青岛市"
+        ],
+        "en": [
+          "qingdao",
+          "tsingtao"
+        ]
+      },
+      "display": {
+        "zh": "青岛",
+        "en": "Qingdao"
+      },
+      "hint": {
+        "zh": "栈桥与啤酒",
+        "en": "Famous for its pier and beer"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/qingdao.webp",
+          "label": {
+            "zh": "信号山俯瞰红瓦老城",
+            "en": "Red-roofed old town from Signal Hill"
+          }
+        },
+        {
+          "path": "decks/cn-cities/qingdao-2.webp",
+          "label": {
+            "zh": "汇泉湾海滩",
+            "en": "Huiquan Bay beach"
+          }
+        },
+        {
+          "path": "decks/cn-cities/qingdao-3.webp",
+          "label": {
+            "zh": "栈桥回澜阁",
+            "en": "Zhanqiao Pier & Huilan Pavilion"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xiamen",
+      "lat": 24.4798,
+      "lng": 118.0894,
+      "answers": {
+        "zh": [
+          "厦门",
+          "厦门市"
+        ],
+        "en": [
+          "xiamen",
+          "amoy"
+        ]
+      },
+      "display": {
+        "zh": "厦门",
+        "en": "Xiamen"
+      },
+      "hint": {
+        "zh": "鼓浪屿",
+        "en": "Home of Gulangyu Island"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/xiamen.webp",
+          "label": {
+            "zh": "鼓浪屿俯瞰本岛",
+            "en": "Gulangyu overlooking Xiamen Island"
+          }
+        },
+        {
+          "path": "decks/cn-cities/xiamen-2.webp",
+          "label": {
+            "zh": "双子塔与礁石",
+            "en": "Twin Towers & coastal rocks"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hongkong",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "answers": {
+        "zh": [
+          "香港",
+          "香港特别行政区"
+        ],
+        "en": [
+          "hongkong",
+          "hong kong",
+          "hk"
+        ]
+      },
+      "display": {
+        "zh": "香港",
+        "en": "Hong Kong"
+      },
+      "hint": {
+        "zh": "维多利亚港夜景",
+        "en": "Victoria Harbour night skyline"
+      },
+      "images": [
+        {
+          "path": "decks/cn-cities/hongkong.webp",
+          "label": {
+            "zh": "太平山顶俯瞰",
+            "en": "View from Victoria Peak"
+          }
+        },
+        {
+          "path": "decks/cn-cities/hongkong-2.webp",
+          "label": {
+            "zh": "维港与红帆船",
+            "en": "Victoria Harbour & red-sail junk"
+          }
+        },
+        {
+          "path": "decks/cn-cities/hongkong-3.webp",
+          "label": {
+            "zh": "维港夜景",
+            "en": "Victoria Harbour at night"
+          }
+        }
+      ]
+    }
+  ]
+}

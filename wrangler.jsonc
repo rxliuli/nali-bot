@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nali-bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-01-01",
+
+  // Secrets (set via `wrangler secret put`, never commit):
+  //   DISCORD_TOKEN        bot token (used only by scripts/register.ts)
+  //   DISCORD_PUBLIC_KEY   public key for interaction signature verification
+  //   DISCORD_APPLICATION_ID
+
+  "durable_objects": {
+    "bindings": [{ "name": "GameRoom", "class_name": "GameRoom" }]
+  },
+
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "nali-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nali (Nǎlǐ 哪里) — a city-guessing Discord bot for language exchange servers, running on Cloudflare Workers",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "register": "vite-node scripts/register.ts",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p test/tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "vite-node scripts/dev/lint-decks.ts",
+    "audit:judge": "vite-node scripts/dev/audit-judge.ts",
+    "optimize:images": "vite-node scripts/dev/optimize-images.ts"
+  },
+  "dependencies": {
+    "discord-hono": "^0.21.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.21.2",
+    "@cloudflare/workers-types": "^5.20260811.1",
+    "@types/node": "^24.0.0",
+    "discord-api-types": "^0.38.53",
+    "sharp": "^0.35.3",
+    "typescript": "^5.6.0",
+    "vite-node": "^6.0.0",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@10.34.5"
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext"],
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts", "scripts/**/*.ts", "decks/**/*.json"]
+}

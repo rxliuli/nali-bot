@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.dev.vars
+.env
+.wrangler/
+*.log
+.DS_Store
+
+# Archived photo sources — only created when optimize-images runs with --keep
+decks/*/.archive/
