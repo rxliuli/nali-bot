@@ -52,4 +52,4 @@ We may update this Privacy Policy from time to time. Material changes will be re
 
 ## 8. Contact
 
-For privacy questions or deletion requests, contact: **[rxliuli@gmail.com](mailto:rxliuli@gmail.com)** *(replace with the operator's contact email)*
+For privacy questions or deletion requests, contact: **[rxliuli@gmail.com](mailto:rxliuli@gmail.com)**

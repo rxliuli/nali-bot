@@ -44,4 +44,4 @@ We may update these Terms from time to time. Material changes will be reflected 
 
 ## 8. Contact
 
-For questions about these Terms, contact: **[rxliuli@gmail.com](mailto:rxliuli@gmail.com)** *(replace with the operator's contact email)*
+For questions about these Terms, contact: **[rxliuli@gmail.com](mailto:rxliuli@gmail.com)**
