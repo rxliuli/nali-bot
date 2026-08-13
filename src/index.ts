@@ -17,6 +17,7 @@ export { GameRoom } from './do/GameRoom'
  */
 export function buildApp(options?: InitOptions<Env>): DiscordHono<Env> {
   return new DiscordHono<Env>(options)
+    .command('ping', (c) => c.res('pong'))
     .command('play', play)
     .command('stop', stop)
     .command('rank', rank)
