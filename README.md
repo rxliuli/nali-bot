@@ -63,7 +63,7 @@ Run the collision audit after editing decks: `pnpm audit:judge`.
 1. Create an application; copy the **Application ID** and **Public Key**; create a **bot** and copy its **token**.
 2. **Installation** page → *Install Link* → **User Install**, and in *Installation Contexts* keep both **Server Install** and **User Install** checked (so the user-install link works).
 3. **OAuth2** page → default link should target the app. Use the generated install link to add the app to your own account.
-4. **Interactions Endpoint URL**: point it at your deployed Worker (`https://nali-bot.<your-subdomain>.workers.dev`). Press *Save* — this verifies the endpoint (returns `Operational🔥` on GET, handles `PING` correctly).
+4. **Interactions Endpoint URL**: point it at your deployed Worker (`https://nali-bot.rxliuli.workers.dev`). Press *Save* — this verifies the endpoint (returns `Operational🔥` on GET, handles `PING` correctly).
 5. **Terms of Service / Privacy Policy URLs**: in the app's **General Information** page, fill the *Terms of Service URL* and *Privacy Policy URL* fields with the URLs of [`TERMS_OF_SERVICE.md`](TERMS_OF_SERVICE.md) and [`PRIVACY_POLICY.md`](PRIVACY_POLICY.md) in this repo (e.g. `https://raw.githubusercontent.com/<owner>/<repo>/main/TERMS_OF_SERVICE.md`). *Replace the placeholder contact email in both files first.*
 
 ### 3. Secrets
@@ -90,7 +90,7 @@ Commands are registered **globally** (guild commands don't support user install)
 ### 5. Deploy & verify
 
 ```bash
-pnpm deploy
+pnpm run deploy
 # then, in a server where you do NOT have admin rights:
 # /ping  →  pong
 # /play  →  question card
