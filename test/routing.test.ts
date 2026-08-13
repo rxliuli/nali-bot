@@ -84,6 +84,14 @@ describe('interaction routing (M1/M2 flow)', () => {
     expect(await res.json()).toEqual({ type: 1 })
   })
 
+  it('/ping returns pong (registered command must have a handler)', async () => {
+    const res = await send(command('ping'))
+    expect(res.status).toBe(200)
+    const body = (await res.json()) as { type: number; data: { content: string } }
+    expect(body.type).toBe(4)
+    expect(body.data.content).toBe('pong')
+  })
+
   it('/play returns a question embed + guess button', async () => {
     const res = await send(command('play', [{ name: 'deck', type: 3, value: 'cn-cities' }]))
     expect(res.status).toBe(200)
