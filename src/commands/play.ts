@@ -7,7 +7,7 @@ import { getChannelId } from '../game/util'
 /** /play [deck] — start a round in this channel. */
 export const play: CommandHandler<Env> = async (c) => {
   const channelId = getChannelId(c.interaction)
-  if (!channelId) return c.flags('EPHEMERAL').res('无法确定频道 / Could not determine channel')
+  if (!channelId) return c.flags('EPHEMERAL').res('Could not determine the channel')
 
   const deckId = c.get('deck') ?? 'cn-cities'
   const stub = c.env.GameRoom.getByName(channelId)
@@ -19,22 +19,22 @@ export const play: CommandHandler<Env> = async (c) => {
 
   if (!result.ok) {
     if (result.reason === 'unknown-deck') {
-      return c.flags('EPHEMERAL').res('未知牌组 / Unknown deck')
+      return c.flags('EPHEMERAL').res('Unknown deck')
     }
     if (result.reason === 'no-images') {
       return c
         .flags('EPHEMERAL')
-        .res('牌组还没有可用的图片，先运行优化脚本 / No photos ready yet — run the optimize script first')
+        .res('No photos ready yet — run the optimize script first')
     }
     return c
       .flags('EPHEMERAL')
-      .res('本频道已有一轮进行中，等它结束或使用 /stop 提前结束 / A round is already in progress — wait for it or use /stop')
+      .res('A round is already in progress — wait for it or use /stop')
   }
 
   const deck = getDeck(result.deckId)
   const card = getCard(result.deckId, result.cardId)
   if (!deck || !card) {
-    return c.flags('EPHEMERAL').res('牌组数据异常 / Deck data error')
+    return c.flags('EPHEMERAL').res('Deck data error')
   }
 
   return c.res({

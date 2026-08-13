@@ -100,8 +100,8 @@ describe('interaction routing (M1/M2 flow)', () => {
       data: { embeds: { title?: string; description?: string; image?: { url: string } }[]; components: unknown[] }
     }
     expect(body.type).toBe(4) // CHANNEL_MESSAGE_WITH_SOURCE
-    expect(body.data.embeds[0]!.title).toContain('猜猜这是哪座城市')
-    expect(body.data.embeds[0]!.description).toContain('💡 提示 / Hint：') // bilingual hint line
+    expect(body.data.embeds[0]!.title).toContain('Guess the city!')
+    expect(body.data.embeds[0]!.description).toContain('💡 Hint:') // English label + bilingual content
     expect(body.data.embeds[0]!.image!.url).toContain('cdn.jsdelivr.net')
     expect(body.data.components.length).toBeGreaterThan(0)
   })
@@ -111,7 +111,7 @@ describe('interaction routing (M1/M2 flow)', () => {
     const res = await send(command('play', []))
     const body = (await res.json()) as { data: { flags: number; content: string } }
     expect(body.data.flags).toBe(64) // EPHEMERAL
-    expect(body.data.content).toContain('已有一轮进行中')
+    expect(body.data.content).toContain('already in progress')
   })
 
   it('button opens the guess modal', async () => {
@@ -131,19 +131,19 @@ describe('interaction routing (M1/M2 flow)', () => {
     const wrong = await send(modalSubmit('u-1', 'Alice', '东京'))
     expect(((await wrong.json()) as { data: { flags: number; content: string } }).data).toMatchObject({
       flags: 64,
-      content: expect.stringContaining('不对'),
+      content: expect.stringContaining('Not quite'),
     })
 
     // correct answer → ephemeral "correct"
     const right = await send(modalSubmit('u-1', 'Alice', card.display.zh))
     const rightBody = (await right.json()) as { data: { flags: number; content: string } }
     expect(rightBody.data.flags).toBe(64)
-    expect(rightBody.data.content).toContain('答对')
+    expect(rightBody.data.content).toContain('Correct')
 
     // already-correct user is blocked on the next button click
     const blocked = await send(button('u-1', 'Alice'))
     expect(((await blocked.json()) as { data: { flags: number; content: string } }).data.content).toContain(
-      '你已经答对啦',
+      'You already answered',
     )
   })
 
@@ -154,7 +154,7 @@ describe('interaction routing (M1/M2 flow)', () => {
     const res = await send(command('stop'))
     const body = (await res.json()) as { data: { flags: number; content: string } }
     expect(body.data.flags).toBe(64)
-    expect(body.data.content).toContain('已提前结束')
+    expect(body.data.content).toContain('Round ended early')
     expect(fetchMock).toHaveBeenCalledTimes(1)
     const url = (fetchMock.mock.calls[0] as unknown[])[0] as string
     expect(url).toBe('https://discord.com/api/webhooks/test-app-id/tok-1')
@@ -166,6 +166,6 @@ describe('interaction routing (M1/M2 flow)', () => {
     const res = await send(command('rank'))
     const body = (await res.json()) as { type: number; data: { embeds: { title: string }[] } }
     expect(body.type).toBe(4)
-    expect(body.data.embeds[0]!.title).toContain('排行榜')
+    expect(body.data.embeds[0]!.title).toContain('Leaderboard')
   })
 })

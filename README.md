@@ -17,7 +17,7 @@ A city-guessing game bot for **Chinese ⇄ English language-exchange servers**. 
 | `/rank` | This channel's cumulative leaderboard (top 10). |
 | `/ping` | Health check. |
 
-Flow: `/play` → question card (a random photo of a random city + hint + 60s countdown) + **我要猜 / Guess** button → modal → ephemeral ✅/❌ feedback (wrong answers can be retried, unlimited) → alarm reveals the answer (with the specific landmark name, e.g. 📍 故宫 / Forbidden City) + static map + who got it right (🥇🥈🥉) + updated scores. Scoring: **+1** per correct answer, **+1 bonus** for the first correct answer of the round.
+Flow: `/play` → question card (a random photo of a random city + hint + 60s countdown) + **Guess** button → modal → ephemeral ✅/❌ feedback (wrong answers can be retried, unlimited) → alarm reveals the answer (with the specific landmark name, e.g. 📍 故宫 / Forbidden City) + static map + who got it right (🥇🥈🥉) + updated scores. Scoring: **+1** per correct answer, **+1 bonus** for the first correct answer of the round.
 
 ## Architecture
 
