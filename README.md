@@ -8,11 +8,22 @@ A city-guessing game bot for **Chinese ⇄ English language-exchange servers**. 
 - **Data**: one self-contained deck folder `decks/cn-cities/` (deck.json + its WebP images, 中国城市 only in v1); photos are your own, optimized in place by a single script, served via jsDelivr from a public repo
 - **Install mode**: **User-Installed App** — no guild member context, so **all outbound messages go through interaction webhook tokens** (`POST /webhooks/{application_id}/{interaction_token}`, valid ~15 min). The bot token is never used at runtime.
 
+## Install / 安装
+
+Click **Add to My Apps** to install the bot on your account — it then works in any server, DM, or group DM:
+
+**https://discord.com/oauth2/authorize?client_id=1537318363909595146&integration_type=1&scope=applications.commands**
+
+Notes:
+- Requires the app to be **published** (Developer Portal → App → Settings → *Make it public*) — otherwise only the owner can install it. No verification is needed for basic slash commands.
+- After installing, slash commands can take up to ~1 hour to appear (global command cache); press **Ctrl+R** in the client to refresh sooner.
+- One round per channel at a time: wait for the 60s reveal, or use `/stop` to end early.
+
 ## Commands
 
 | Command | Description |
 |---|---|
-| `/play [deck]` | Start a round (deck: 中国城市 / 美国城市). One round per channel at a time. |
+| `/play [deck]` | Start a round (deck: 中国城市 / China). One round per channel at a time. |
 | `/stop` | End the current round early and reveal. |
 | `/rank` | This channel's cumulative leaderboard (top 10). |
 | `/ping` | Health check. |
