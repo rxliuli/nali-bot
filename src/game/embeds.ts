@@ -7,16 +7,26 @@ const COLOR_QUESTION = 0x2b6cb0
 const COLOR_ANSWER = 0x38a169
 const COLOR_MAP = 0xed8936
 
+/** One bilingual line for the optional hint. */
+function hintLine(card: Card): string {
+  const zh = card.hint?.zh
+  const en = card.hint?.en
+  if (zh && en) return `💡 提示 / Hint：${zh} / ${en}`
+  if (zh) return `💡 提示 / Hint：${zh}`
+  if (en) return `💡 提示 / Hint：${en}`
+  return ''
+}
+
 /** The question card shown by /play: photo + deck + countdown + hint. */
 export function buildQuestionEmbed(deck: Deck, card: Card, imagePath: string, endsAt: number): Embed {
   const secondsLeft = Math.max(0, Math.round((endsAt - Date.now()) / 1000))
+  const hint = hintLine(card)
   const lines = [
     `牌组：**${deck.name.zh} / ${deck.name.en}**`,
     '',
     `⏱️ 剩余 **${secondsLeft}** 秒 / seconds`,
   ]
-  if (card.hint?.zh) lines.push(`💡 提示：${card.hint.zh}`)
-  if (card.hint?.en) lines.push(`💡 Hint: ${card.hint.en}`)
+  if (hint) lines.push(hint)
   lines.push('', '点击下方按钮开始猜 / Click the button below to guess')
   return new Embed()
     .title('🏙️ 猜猜这是哪座城市？ / Guess the city!')
@@ -43,6 +53,7 @@ export function buildRevealEmbeds(
   scores: PlayerScore[],
 ): Embed[] {
   const label = card.images.find((i) => i.path === imagePath)?.label
+  const hint = hintLine(card)
   const answerEmbed = new Embed()
     .title(`🎯 ${deck.name.zh} / ${deck.name.en}`)
     .description(
@@ -50,8 +61,7 @@ export function buildRevealEmbeds(
         (label?.zh || label?.en
           ? `📍 你看到的是 **${label.zh ?? ''}${label.zh && label.en ? ' / ' : ''}${label.en ?? ''}**\n`
           : '') +
-        (card.hint?.zh ? `提示：${card.hint.zh}\n` : '') +
-        (card.hint?.en ? `Hint: ${card.hint.en}\n` : '') +
+        (hint ? `${hint}\n` : '') +
         '照片如上 / Photo above',
     )
     .image({ url: resolveImageUrl(imagePath) })
@@ -76,7 +86,7 @@ export function buildRevealEmbeds(
     const top = [...scores].sort((a, b) => b.score - a.score).slice(0, 5)
     const lines = top.map((s, i) => {
       const medal = MEDALS[i] ?? `${i + 1}.`
-      const firstNote = s.firsts > 0 ? `（首答 ×${s.firsts}）` : ''
+      const firstNote = s.firsts > 0 ? `（首答 ×${s.firsts} / firsts ×${s.firsts}）` : ''
       return `${medal} **${s.username}** — ${s.score} 分 / pts${firstNote}`
     })
     statsEmbed.fields({ name: '🏆 本频道排行 / Channel leaderboard', value: lines.join('\n'), inline: false })

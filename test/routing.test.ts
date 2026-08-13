@@ -97,10 +97,11 @@ describe('interaction routing (M1/M2 flow)', () => {
     expect(res.status).toBe(200)
     const body = (await res.json()) as {
       type: number
-      data: { embeds: { title?: string; image?: { url: string } }[]; components: unknown[] }
+      data: { embeds: { title?: string; description?: string; image?: { url: string } }[]; components: unknown[] }
     }
     expect(body.type).toBe(4) // CHANNEL_MESSAGE_WITH_SOURCE
     expect(body.data.embeds[0]!.title).toContain('猜猜这是哪座城市')
+    expect(body.data.embeds[0]!.description).toContain('💡 提示 / Hint：') // bilingual hint line
     expect(body.data.embeds[0]!.image!.url).toContain('cdn.jsdelivr.net')
     expect(body.data.components.length).toBeGreaterThan(0)
   })

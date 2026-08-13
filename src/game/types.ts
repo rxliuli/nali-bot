@@ -70,4 +70,4 @@ export interface PlayerScore {
   firsts: number
 }
 
-export const ROUND_MS = 90_000
+export const ROUND_MS = 60_000

@@ -1,6 +1,6 @@
 # Nali（Nǎlǐ 哪里）— 猜城市 Discord Bot
 
-A city-guessing game bot for **Chinese ⇄ English language-exchange servers**. The bot posts a photo of a city; players guess the city name in the language they're learning (Chinese or English); after 90 seconds the answer is revealed together with a static map and the round's results.
+A city-guessing game bot for **Chinese ⇄ English language-exchange servers**. The bot posts a photo of a city; players guess the city name in the language they're learning (Chinese or English); after 60 seconds the answer is revealed together with a static map and the round's results.
 
 - **Runtime**: Cloudflare Workers (HTTP interactions, no Gateway)
 - **Framework**: [discord-hono](https://github.com/luisfun/discord-hono)
@@ -17,7 +17,7 @@ A city-guessing game bot for **Chinese ⇄ English language-exchange servers**. 
 | `/rank` | This channel's cumulative leaderboard (top 10). |
 | `/ping` | Health check. |
 
-Flow: `/play` → question card (a random photo of a random city + hint + 90s countdown) + **我要猜 / Guess** button → modal → ephemeral ✅/❌ feedback (wrong answers can be retried, unlimited) → alarm reveals the answer (with the specific landmark name, e.g. 📍 故宫 / Forbidden City) + static map + who got it right (🥇🥈🥉) + updated scores. Scoring: **+1** per correct answer, **+1 bonus** for the first correct answer of the round.
+Flow: `/play` → question card (a random photo of a random city + hint + 60s countdown) + **我要猜 / Guess** button → modal → ephemeral ✅/❌ feedback (wrong answers can be retried, unlimited) → alarm reveals the answer (with the specific landmark name, e.g. 📍 故宫 / Forbidden City) + static map + who got it right (🥇🥈🥉) + updated scores. Scoring: **+1** per correct answer, **+1 bonus** for the first correct answer of the round.
 
 ## Architecture
 
@@ -127,7 +127,7 @@ To exercise the real Discord flow locally, expose the dev server (e.g. `wrangler
 
 ## Notes & known limits (v1)
 
-- Round length is 90s — well inside the 15-minute interaction-token window; the reveal uses the `/play` token.
+- Round length is 60s — well inside the 15-minute interaction-token window; the reveal uses the `/play` token.
 - If the reveal webhook fails (token expired/revoked), the round is cleaned up and the failure is logged — no retry.
 - Static maps use Yandex Static Maps (the classic OSM staticmap services are defunct). Swap provider in `src/game/map.ts` (`buildMapUrl`).
 - Deck images require a **public** GitHub repo (jsDelivr serves public repos only). Until the repo is public, images won't load — fill in `src/config.ts` and push the `decks/` folder.

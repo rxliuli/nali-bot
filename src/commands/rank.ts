@@ -20,7 +20,7 @@ export const rank: CommandHandler<Env> = async (c) => {
 
   const lines = scores.map((s, i) => {
     const medal = MEDALS[i] ?? `${i + 1}.`
-    const firstNote = s.firsts > 0 ? `（首答 ×${s.firsts}）` : ''
+    const firstNote = s.firsts > 0 ? `（首答 ×${s.firsts} / firsts ×${s.firsts}）` : ''
     return `${medal} **${s.username}** — ${s.score} 分 / pts${firstNote}`
   })
   return c.res({
